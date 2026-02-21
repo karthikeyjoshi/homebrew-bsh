@@ -13,14 +13,13 @@ class Bsh < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libgit2"
+  depends_on "sqlitecpp"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja", "-DUSE_SYSTEM_SQLITECPP=ON", *std_cmake_args
     system "cmake", "--build", "build"
     
     bin.install "build/bsh-daemon"
-    
-    # 3. Install the scripts
     (share/"bsh").install "scripts/bsh_init.zsh"
     (share/"bsh").install "import_zsh.py"
   end
