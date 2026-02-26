@@ -1,8 +1,8 @@
 class Bsh < Formula
   desc "High-performance, Git-aware, predictive terminal history middleware"
   homepage "https://github.com/karthikeyjoshi/bsh"
-  url "https://github.com/karthikeyjoshi/bsh/archive/refs/tags/v0.2.8.tar.gz"
-  sha256 "9110213492692db260420567910ee4869d9c01bb894a27be687247ca1dfc95d3"
+  url "https://github.com/karthikeyjoshi/bsh/archive/refs/tags/v0.2.9.tar.gz"
+  sha256 "562e3eeed98921a83840f15cc2c0b83d81c7936b07894043427a7d754659f043"
   license "MIT"
 
   head "https://github.com/karthikeyjoshi/bsh.git", branch: "main"
